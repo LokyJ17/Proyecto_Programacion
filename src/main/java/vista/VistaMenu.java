@@ -21,8 +21,7 @@ public class VistaMenu extends javax.swing.JFrame {
      */
     public VistaMenu() {
         initComponents();
-
-//Ajustar la imagen del logo de la EPN
+    //Ajustar la imagen del logo de la EPN
     java.awt.EventQueue.invokeLater(() -> {
         ImageIcon img = new ImageIcon(getClass().getResource("/img/politecnicaLogo.png"));
         Image escala = img.getImage().getScaledInstance(lblPoliLogo.getWidth(), 
@@ -34,7 +33,7 @@ public class VistaMenu extends javax.swing.JFrame {
     
     
     
-
+//comentario de prueba
     
 
     /**
