@@ -1,15 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package vista;
 
 import java.awt.Color;
 
-/**
- *
- * @author Master
- */
+
 public class VistaVentaPasaje extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaVentaPasaje.class.getName());
@@ -66,25 +60,22 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
         jButton10 = new javax.swing.JButton();
         jButton25 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
-        jSeparator2 = new javax.swing.JSeparator();
         jPanel3 = new javax.swing.JPanel();
         txtApellido = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         txtNacimiento = new javax.swing.JTextField();
         txtNacionalidad = new javax.swing.JTextField();
-        txtNumerodoc = new javax.swing.JTextField();
+        txtNumdoc = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
-        txtNumero = new javax.swing.JTextField();
-        cbxTipodoc = new javax.swing.JComboBox<>();
+        txtTelefono = new javax.swing.JTextField();
+        cbTipodoc = new javax.swing.JComboBox<>();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
-        jButton118 = new javax.swing.JButton();
+        btnSiguiente = new javax.swing.JButton();
         btnConfirmar = new javax.swing.JButton();
-        cbxGenero = new javax.swing.JComboBox<>();
+        cbGenero = new javax.swing.JComboBox<>();
         jPanel13 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -331,30 +322,11 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(5, 5, 69));
+        setBackground(new java.awt.Color(0, 0, 102));
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Perpetua Titling MT", 0, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 204, 0));
-        jLabel1.setText("   AEROLÍNEAS  FIS");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(565, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(0, 20, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jScrollPane3.setBackground(new java.awt.Color(0, 0, 102));
+        jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane3.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
         jPanel1.setBackground(new java.awt.Color(8, 8, 78));
 
@@ -422,24 +394,25 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
             }
         });
 
-        txtNumerodoc.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        txtNumerodoc.setForeground(new java.awt.Color(153, 153, 153));
-        txtNumerodoc.setText("Nº documento");
-        txtNumerodoc.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número de documento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 102))); // NOI18N
-        txtNumerodoc.setDisabledTextColor(new java.awt.Color(153, 153, 153));
-        txtNumerodoc.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtNumdoc.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        txtNumdoc.setForeground(new java.awt.Color(153, 153, 153));
+        txtNumdoc.setText("Nº documento");
+        txtNumdoc.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número de documento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 102))); // NOI18N
+        txtNumdoc.setDisabledTextColor(new java.awt.Color(153, 153, 153));
+        txtNumdoc.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                txtNumerodocFocusGained(evt);
+                txtNumdocFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtNumerodocFocusLost(evt);
+                txtNumdocFocusLost(evt);
             }
         });
 
         txtEmail.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         txtEmail.setForeground(new java.awt.Color(153, 153, 153));
         txtEmail.setText("Email");
-        txtEmail.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Email", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 102)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 102))); // NOI18N
+        txtEmail.setToolTipText("");
+        txtEmail.setBorder(javax.swing.BorderFactory.createTitledBorder("Email"));
         txtEmail.setDisabledTextColor(new java.awt.Color(153, 153, 153));
         txtEmail.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -455,27 +428,33 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
             }
         });
 
-        txtNumero.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        txtNumero.setForeground(new java.awt.Color(153, 153, 153));
-        txtNumero.setText("Número");
-        txtNumero.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Email", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 102)), "Número", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 102))); // NOI18N
-        txtNumero.setDisabledTextColor(new java.awt.Color(153, 153, 153));
-        txtNumero.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtTelefono.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        txtTelefono.setForeground(new java.awt.Color(153, 153, 153));
+        txtTelefono.setText("Telefono");
+        txtTelefono.setBorder(javax.swing.BorderFactory.createTitledBorder("Telefono"));
+        txtTelefono.setDisabledTextColor(new java.awt.Color(153, 153, 153));
+        txtTelefono.setMinimumSize(new java.awt.Dimension(64, 55));
+        txtTelefono.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                txtNumeroFocusGained(evt);
+                txtTelefonoFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtNumeroFocusLost(evt);
+                txtTelefonoFocusLost(evt);
+            }
+        });
+        txtTelefono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelefonoActionPerformed(evt);
             }
         });
 
-        cbxTipodoc.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        cbxTipodoc.setForeground(new java.awt.Color(153, 153, 153));
-        cbxTipodoc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cédula de Identidad ", "Pasaporte" }));
-        cbxTipodoc.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de documento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 102))); // NOI18N
-        cbxTipodoc.addActionListener(new java.awt.event.ActionListener() {
+        cbTipodoc.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        cbTipodoc.setForeground(new java.awt.Color(153, 153, 153));
+        cbTipodoc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cédula de Identidad ", "Pasaporte" }));
+        cbTipodoc.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de documento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 102))); // NOI18N
+        cbTipodoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbxTipodocActionPerformed(evt);
+                cbTipodocActionPerformed(evt);
             }
         });
 
@@ -484,9 +463,9 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(3, 3, 80));
         jLabel7.setText("Información de contacto:");
 
-        jButton118.setBackground(new java.awt.Color(255, 204, 0));
-        jButton118.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton118.setText("Siguiente");
+        btnSiguiente.setBackground(new java.awt.Color(255, 204, 0));
+        btnSiguiente.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        btnSiguiente.setText("Siguiente");
 
         btnConfirmar.setBackground(new java.awt.Color(255, 204, 0));
         btnConfirmar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -497,13 +476,13 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
             }
         });
 
-        cbxGenero.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        cbxGenero.setForeground(new java.awt.Color(153, 153, 153));
-        cbxGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", " " }));
-        cbxGenero.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Género", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 102))); // NOI18N
-        cbxGenero.addActionListener(new java.awt.event.ActionListener() {
+        cbGenero.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        cbGenero.setForeground(new java.awt.Color(153, 153, 153));
+        cbGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", " " }));
+        cbGenero.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Género", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 102))); // NOI18N
+        cbGenero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbxGeneroActionPerformed(evt);
+                cbGeneroActionPerformed(evt);
             }
         });
 
@@ -515,13 +494,12 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 878, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 878, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(56, 56, 56)
                         .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(85, 85, 85))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -534,21 +512,21 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cbxGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbxTipodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbTipodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(95, 95, 95)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNumerodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtNumdoc, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton118, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
         jPanel3Layout.setVerticalGroup(
@@ -564,10 +542,10 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
                     .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNumerodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbxTipodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNumdoc, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbTipodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
-                .addComponent(cbxGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cbGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -575,15 +553,15 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addComponent(btnConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton118, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
         );
 
-        cbxGenero.getAccessibleContext().setAccessibleName("Género");
+        txtTelefono.getAccessibleContext().setAccessibleName("Telefono");
 
         jPanel13.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -599,7 +577,7 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(568, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -636,118 +614,90 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jSeparator2)
-                .addContainerGap())
-            .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(243, 243, 243))
         );
 
+        jScrollPane3.setViewportView(jPanel1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jSeparator1)
-                .addContainerGap())
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(896, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 991, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 979, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(214, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton25ActionPerformed
 
-    private void txtApellidoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtApellidoFocusGained
-        if (txtApellido.getText().equals("Apellido")) {
-            txtApellido.setText("");
-            txtApellido.setForeground(Color.BLACK);
-        }
-    }//GEN-LAST:event_txtApellidoFocusGained
+    private void cbGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbGeneroActionPerformed
+        String genero = cbGenero.getSelectedItem().toString();
+    }//GEN-LAST:event_cbGeneroActionPerformed
 
-    private void txtApellidoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtApellidoFocusLost
-        if (txtNombre.getText().isEmpty()) {
-           txtNombre.setText("Nombre");
-           txtNombre.setForeground(Color.GRAY);
-        }
-    }//GEN-LAST:event_txtApellidoFocusLost
+    private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfirmarActionPerformed
 
-    private void txtNombreFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNombreFocusGained
-        if (txtNombre.getText().equals("Nombre")) {
-            txtNombre.setText("");
-            txtNombre.setForeground(Color.BLACK);
-        }
-    }//GEN-LAST:event_txtNombreFocusGained
+    private void cbTipodocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTipodocActionPerformed
+        String tipoDoc = cbTipodoc.getSelectedItem().toString();
+    }//GEN-LAST:event_cbTipodocActionPerformed
 
-    private void txtNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNombreFocusLost
-        if (txtNombre.getText().isEmpty()) {
-           txtNombre.setText("Nombre");
-           txtNombre.setForeground(Color.GRAY);
+    private void txtTelefonoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtTelefonoFocusLost
+        if (txtTelefono.getText().isEmpty()) {
+            txtTelefono.setText("Numero");
+            txtTelefono.setForeground(Color.GRAY);
         }
-    }//GEN-LAST:event_txtNombreFocusLost
+    }//GEN-LAST:event_txtTelefonoFocusLost
 
-    private void txtNacimientoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNacimientoFocusGained
-        if (txtNacimiento.getText().equals("Nacimiento")) {
-            txtNacimiento.setText("");
-            txtNacimiento.setForeground(Color.BLACK);
+    private void txtTelefonoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtTelefonoFocusGained
+        if (txtTelefono.getText().equals("Numero")) {
+            txtTelefono.setText("");
+            txtTelefono.setForeground(Color.BLACK);
         }
-    }//GEN-LAST:event_txtNacimientoFocusGained
+    }//GEN-LAST:event_txtTelefonoFocusGained
 
-    private void txtNacimientoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNacimientoFocusLost
-        if (txtNacimiento.getText().isEmpty()) {
-           txtNacimiento.setText("Nombre");
-           txtNacimiento.setForeground(Color.GRAY);
-        }
-    }//GEN-LAST:event_txtNacimientoFocusLost
+    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmailActionPerformed
 
-    private void txtNumerodocFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNumerodocFocusGained
-        if (txtNumerodoc.getText().equals("Numerodoc")) {
-            txtNumerodoc.setText("");
-            txtNumerodoc.setForeground(Color.BLACK);
+    private void txtEmailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtEmailFocusLost
+        if (txtEmail.getText().isEmpty()) {
+            txtEmail.setText("Email");
+            txtEmail.setForeground(Color.GRAY);
         }
-    }//GEN-LAST:event_txtNumerodocFocusGained
-
-    private void txtNumerodocFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNumerodocFocusLost
-        if (txtNumerodoc.getText().isEmpty()) {
-           txtNumerodoc.setText("Numerodoc");
-           txtNumerodoc.setForeground(Color.GRAY);
-        }
-    }//GEN-LAST:event_txtNumerodocFocusLost
+    }//GEN-LAST:event_txtEmailFocusLost
 
     private void txtEmailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtEmailFocusGained
         if (txtEmail.getText().equals("Email")) {
@@ -756,35 +706,28 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtEmailFocusGained
 
-    private void txtEmailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtEmailFocusLost
-        if (txtEmail.getText().isEmpty()) {
-           txtEmail.setText("Email");
-           txtEmail.setForeground(Color.GRAY);
+    private void txtNumdocFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNumdocFocusLost
+        if (txtNumdoc.getText().isEmpty()) {
+            txtNumdoc.setText("Numerodoc");
+            txtNumdoc.setForeground(Color.GRAY);
         }
-    }//GEN-LAST:event_txtEmailFocusLost
+    }//GEN-LAST:event_txtNumdocFocusLost
 
-    private void txtNumeroFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNumeroFocusGained
-        if (txtNumero.getText().equals("Numero")) {
-            txtNumero.setText("");
-            txtNumero.setForeground(Color.BLACK);
+    private void txtNumdocFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNumdocFocusGained
+        if (txtNumdoc.getText().equals("Numerodoc")) {
+            txtNumdoc.setText("");
+            txtNumdoc.setForeground(Color.BLACK);
         }
-    }//GEN-LAST:event_txtNumeroFocusGained
+    }//GEN-LAST:event_txtNumdocFocusGained
 
-    private void txtNumeroFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNumeroFocusLost
-        if (txtNumero.getText().isEmpty()) {
-           txtNumero.setText("Numero");
-           txtNumero.setForeground(Color.GRAY);
-        }
-    }//GEN-LAST:event_txtNumeroFocusLost
-
-    private void cbxTipodocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxTipodocActionPerformed
-        String tipoDoc = cbxTipodoc.getSelectedItem().toString();
-    }//GEN-LAST:event_cbxTipodocActionPerformed
+    private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNacionalidadActionPerformed
 
     private void txtNacionalidadFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNacionalidadFocusLost
         if (txtNacionalidad.getText().isEmpty()) {
-           txtNacionalidad.setText("Nacionalidad");
-           txtNacionalidad.setForeground(Color.GRAY);
+            txtNacionalidad.setText("Nacionalidad");
+            txtNacionalidad.setForeground(Color.GRAY);
         }
     }//GEN-LAST:event_txtNacionalidadFocusLost
 
@@ -795,21 +738,51 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtNacionalidadFocusGained
 
-    private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNacionalidadActionPerformed
+    private void txtNacimientoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNacimientoFocusLost
+        if (txtNacimiento.getText().isEmpty()) {
+            txtNacimiento.setText("Nombre");
+            txtNacimiento.setForeground(Color.GRAY);
+        }
+    }//GEN-LAST:event_txtNacimientoFocusLost
 
-    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmailActionPerformed
+    private void txtNacimientoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNacimientoFocusGained
+        if (txtNacimiento.getText().equals("Nacimiento")) {
+            txtNacimiento.setText("");
+            txtNacimiento.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtNacimientoFocusGained
 
-    private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnConfirmarActionPerformed
+    private void txtNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNombreFocusLost
+        if (txtNombre.getText().isEmpty()) {
+            txtNombre.setText("Nombre");
+            txtNombre.setForeground(Color.GRAY);
+        }
+    }//GEN-LAST:event_txtNombreFocusLost
 
-    private void cbxGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxGeneroActionPerformed
-        String genero = cbxGenero.getSelectedItem().toString();
-    }//GEN-LAST:event_cbxGeneroActionPerformed
+    private void txtNombreFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNombreFocusGained
+        if (txtNombre.getText().equals("Nombre")) {
+            txtNombre.setText("");
+            txtNombre.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtNombreFocusGained
+
+    private void txtApellidoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtApellidoFocusLost
+        if (txtNombre.getText().isEmpty()) {
+            txtNombre.setText("Nombre");
+            txtNombre.setForeground(Color.GRAY);
+        }
+    }//GEN-LAST:event_txtApellidoFocusLost
+
+    private void txtApellidoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtApellidoFocusGained
+        if (txtApellido.getText().equals("Apellido")) {
+            txtApellido.setText("");
+            txtApellido.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtApellidoFocusGained
+
+    private void txtTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelefonoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -838,9 +811,10 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton B8;
-    private javax.swing.JButton btnConfirmar;
-    private javax.swing.JComboBox<String> cbxGenero;
-    private javax.swing.JComboBox<String> cbxTipodoc;
+    public javax.swing.JButton btnConfirmar;
+    public javax.swing.JButton btnSiguiente;
+    public javax.swing.JComboBox<String> cbGenero;
+    public javax.swing.JComboBox<String> cbTipodoc;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton100;
     private javax.swing.JButton jButton101;
@@ -860,14 +834,12 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
     private javax.swing.JButton jButton115;
     private javax.swing.JButton jButton116;
     private javax.swing.JButton jButton117;
-    private javax.swing.JButton jButton118;
     private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton95;
     private javax.swing.JButton jButton96;
     private javax.swing.JButton jButton97;
     private javax.swing.JButton jButton98;
     private javax.swing.JButton jButton99;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -881,20 +853,18 @@ public class VistaVentaPasaje extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextField txtApellido;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtNacimiento;
-    private javax.swing.JTextField txtNacionalidad;
-    private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtNumero;
-    private javax.swing.JTextField txtNumerodoc;
+    public javax.swing.JTextField txtApellido;
+    public javax.swing.JTextField txtEmail;
+    public javax.swing.JTextField txtNacimiento;
+    public javax.swing.JTextField txtNacionalidad;
+    public javax.swing.JTextField txtNombre;
+    public javax.swing.JTextField txtNumdoc;
+    public javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }
