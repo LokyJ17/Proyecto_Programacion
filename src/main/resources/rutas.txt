@@ -1,0 +1,9 @@
+Quito-Ecuador,Madrid-España,UIO-MAD-01,1100
+Quito-Ecuador,Londres-Inglaterra,UIO-LON-02,1250
+Guayaquil-Ecuador,Madrid-España,GYE-MAD-03,1050
+Bogotá-Colombia,París-Francia,BOG-PAR-04,950
+Lima-Perú,Roma-Italia,LIM-ROM-05,1300
+Santiago-Chile,Barcelona-España,SCL-BCN-06,1150
+Buenos Aires-Argentina,Londres-Inglaterra,EZE-LON-07,1400
+Quito-Ecuador,Guayaquil-Ecuador,UIO-GYE-08,60
+Bogotá-Colombia,Lima-Perú,BOG-LIM-09,180

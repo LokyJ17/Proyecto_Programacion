@@ -1,0 +1,15 @@
+Quito-Ecuador
+Guayaquil-Ecuador
+Cuenca-Ecuador
+Bogotá-Colombia
+Medellín-Colombia
+Cali-Colombia
+Lima-Perú
+Cusco-Perú
+Arequipa-Perú
+Santiago-Chile
+Antofagasta-Chile
+Concepción-Chile
+Buenos Aires-Argentina
+Córdoba-Argentina
+Rosario-Argentina
