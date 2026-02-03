@@ -16,7 +16,7 @@ public class RutaDAO {
     Primero: esta clase debe contener los metedos para listar en los comboBox 
     de vistaMenu la información de las ciudades de origen y destino
     
-    Segundo: en base a lo que se seleccione en vistaMenu habráun método que compare
+    Segundo: en base a lo que se seleccione en vistaMenu habrá un método que compare
     y determine si la ruta existe o no
     
     
@@ -25,17 +25,6 @@ public class RutaDAO {
     private File fileDestinos = new File("src/main/resources/destinos.txt");
     private File fileRutas = new File("src/main/resources/rutas.txt");
     
-    // Método para leer listas (Ciudad-Pais)
-    private ArrayList<String> leerArchivoCiudadPais(File archivo) {
-        ArrayList<String> lista = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
-            String linea;
-            while ((linea = br.readLine()) != null) {
-                lista.add(linea.trim());
-            }
-        } catch (IOException e) { e.printStackTrace(); }
-        return lista;
-    }
     
     //Metodo para obtener la lista de origenes
     public ArrayList<String> obtenerListaOrigenes() {
@@ -72,19 +61,24 @@ public class RutaDAO {
     try (BufferedReader br = new BufferedReader(new FileReader(fileRutas))) {
         String linea;
         while ((linea = br.readLine()) != null) {
-            String[] datos = linea.split(","); // Separar gracias al formato csv
+            String[] datos = linea.split(",");
+            if (datos.length < 4) continue; 
+
+            // Limpiar espacios en blanco con .trim()
+            String origenTxt = datos[0].trim();
+            String destinoTxt = datos[1].trim();
             
-            // Comparamos de destino y origen seleccionados
-            if (datos[0].equalsIgnoreCase(origenSeleccionado) && 
-                datos[1].equalsIgnoreCase(destinoSeleccionado)) {
+            if (origenTxt.equalsIgnoreCase(origenSeleccionado) && 
+                destinoTxt.equalsIgnoreCase(destinoSeleccionado)) {
                 
-                // Si coinciden, devolvemos el objeto Ruta con su ID y Precio
-                return new Ruta(datos[0], datos[1], datos[2], Double.parseDouble(datos[3]));
+                // Retornar el objeto con los datos del CSV
+                return new Ruta(origenTxt, destinoTxt, datos[2].trim(), Double.parseDouble(datos[3].trim()));
             }
         }
-    } catch (IOException e) { e.printStackTrace(); }
-    
-    return null; // Cuando no hay nimguna ruta entre las ciuidades seleccionadas
+    } catch (IOException | NumberFormatException e) {
+        System.err.println("Error al procesar el archivo de rutas: " + e.getMessage());
+    }
+    return null; 
 }
 
     

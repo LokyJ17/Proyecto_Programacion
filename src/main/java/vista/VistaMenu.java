@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package vista;
 
 
@@ -14,7 +11,7 @@ import com.github.lgooddatepicker.components.DatePickerSettings;
 import java.awt.BorderLayout;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import modelo.RutaDAO;
+import javax.swing.JButton;
 
 
 
@@ -74,7 +71,7 @@ public class VistaMenu extends javax.swing.JFrame {
     lblCalendar2.setIcon(new ImageIcon(imgEscalaCalendar));
     lblPerson.setIcon(new ImageIcon(imgEscalaPerson));
     
-    // Maximizar para que se vea todo bien al abrir
+    //Maximizar para que se vea todo bien al abrir
     this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
     
     //Tarjetas de viaje
@@ -106,7 +103,7 @@ public class VistaMenu extends javax.swing.JFrame {
     
     
     private void configurarCalendarios() {
-    // 1. Configurar Fecha de Ida
+    //Configurar Fecha de Ida
     DatePickerSettings settingsIda = new DatePickerSettings();
     settingsIda.setFormatForDatesCommonEra("dd/MM/yyyy");
     datePickerIda = new DatePicker(settingsIda);
@@ -116,7 +113,7 @@ public class VistaMenu extends javax.swing.JFrame {
     pnlDateContainer.add(datePickerIda, BorderLayout.CENTER);
     pnlDateContainer.revalidate();
 
-    // 2. Configurar Fecha de Regreso
+    //Configurar Fecha de Regreso
     DatePickerSettings settingsRegreso = new DatePickerSettings();
     settingsRegreso.setFormatForDatesCommonEra("dd/MM/yyyy");
     datePickerRegreso = new DatePicker(settingsRegreso);
@@ -129,17 +126,40 @@ public class VistaMenu extends javax.swing.JFrame {
     }
     
     
-    //Inyectar la lista a comboBox Origen
+    //Metodo para inyectar la lista a comboBox Origen en el controladorMenu
     public void cargarCiudadesEnCombo(ArrayList<String> listaOrigenes) {
     this.cmbOrigen.removeAllItems(); // Limpia el "Item 1" que viene por defecto
     for (String c : listaOrigenes) {this.cmbOrigen.addItem(c); }
     }
     
-    //Inyectar la lista a comboBox Destino
+    //Metodo para inyectar la lista a comboBox Destino en el controladorMenu
     public void cargarCiudadesEnCombo2(ArrayList<String> listaOrigenes) {
     this.cmbDestino.removeAllItems(); // Limpia el "Item 1" que viene por defecto
     for (String c : listaOrigenes) {this.cmbDestino.addItem(c); }
     }
+    
+    
+    //Getters de la información de origen, destino, fecha ida, fecha regreso, pasajeros y botón
+    public String getOrigen() { return cmbOrigen.getSelectedItem().toString(); }
+    public String getDestino() { return cmbDestino.getSelectedItem().toString(); }
+    
+    public LocalDate getFechaIda() { return datePickerIda.getDate(); }
+    public LocalDate getFechaRegreso() { return datePickerRegreso.getDate(); }
+    
+    public String getNumPasajeros () { return cmbPasajeros.getSelectedItem().toString(); }
+    
+    public JButton getBtnBuscar() { return btnBuscar; }
+    
+    //Listener para el botón buscar
+     public void addBtnBuscarListener(java.awt.event.ActionListener listen) {
+        btnBuscar.addActionListener(listen);
+    }
+     
+       
+    
+     
+    
+    
     
     
 
